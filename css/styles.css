@@ -168,34 +168,80 @@ color: #404bbf;
 
 /*----Section 1----*/
 .section-title {
-    padding: 188px 0;
+    padding: 72px 0; 
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/people-office.jpg);
     background-position: center; 
     background-color: #2e2f42;
     background-repeat: no-repeat;
     background-size: cover; 
-    max-width: 1440px;
+    max-width: 320px;
     margin: 0 auto;
 }
+
+@media screen and (min-width: 768px) {
+    .section-title {
+    padding: 112px 0;
+    max-width: 768px;
+
+} 
+} 
+
+@media screen and (min-width: 1158px) {
+    .section-title {
+    padding: 188px 0;
+    max-width: 1440px; } 
+} 
 
 .container-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    padding-left: 58px; 
+    padding-right: 58px;
 } 
+
+@media screen and (min-width: 768px) {
+    .container-title {
+        padding-left: 136px; 
+        padding-right: 136px;
+    }  
+}
+
+@media screen and (min-width: 1158px) {
+    .container-title {
+        padding-left: 472px; 
+        padding-right: 472px;
+    }   
+}
+
 
 .main-title {
 font-weight: 700;
-font-size: 56px;
-line-height: 1.07;
+font-size: 36px;
+line-height: 1.11;
+
 letter-spacing: 0.02em;
 text-align: center;
 color: #fff;
 max-width: 496px;
 margin-right: auto;
 margin-left: auto;
-margin-bottom: 48px; 
+margin-bottom: 72px; 
+}
+
+@media screen and (min-width: 768px) {
+    .main-title {
+    font-size: 56px;
+    line-height: 1.07;
+    margin-bottom: 36px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .main-title {
+    margin-bottom: 48px;
+    }
 }
 
 .title-btn {
@@ -213,13 +259,24 @@ height: 56px;
 background-color: #4D5AE5;
 margin-right: auto;
 margin-left: auto;
-box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.title-btn:hover, .title-btn:focus {
-background-color: #404BBF;
+@media screen and (min-width: 768px) {
+    .title-btn {
+        box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);   
+    }
+}
 
+.title-btn:focus {
+background-color: #404BBF;
+}
+
+@media screen and (min-width: 1158px) {
+    .title-btn:hover, .title-btn:focus {
+        background-color: #404BBF;
+        }  
 }
 
 /*---Section 2 Features----*/
@@ -408,6 +465,20 @@ padding-bottom: 120px;
     align-items: center;
     margin: 0 auto;
     border-radius: 0 0 4px 4px;
+    width: 296px;
+    
+}
+
+@media screen and (min-width: 768px) {
+    .container-team {
+        width: 584px;
+    }
+}
+
+@media screen and (min-width: 1158px) {
+    .container-team {
+        width: 1158px;
+    }
 }
 
 .team-title {
