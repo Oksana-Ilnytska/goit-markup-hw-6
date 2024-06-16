@@ -14,17 +14,12 @@
 <body>
     
 <!--Header-->
-<header class="header hidden">
+<header class="header">
     <div class=" container container-header">
     <nav class="nav-header">
 <!--Logo-->
     <a class="logo" href="./index.html">Web<span class="logo-colored">Studio</span></a>
 
-<button class="header-btn">
-    <svg width="24" height="24">
-        <use href=""></use>
-    </svg>
-</button>
     <!--Menu-->
     <ul class="menu-list">
 <!--Menu element 1 Studio-->
@@ -43,6 +38,13 @@
 </nav>
 
 <address class="address">
+
+    <button class="header-btn">
+        <svg width="24" height="24" class="header-btn-icon">
+            <use href="./images/icons.svg#icon-heroicons"></use>
+        </svg>
+    </button>
+
     <ul class="menu-address">
         <li>
             <a class="address-link" href="mailto:info@devstudio.com" target="_blank">info@devstudio.com</a>
@@ -59,7 +61,7 @@
 <!--Main-->
 <main>
 <!-- Section 1 Title-->
-<section class="section-hero">
+<section class="section-hero hidden">
     <div class=" container container-hero">
     <h1 class="main-title">Effective Solutions for Your Business</h1>
 <button type="button" class="hero-btn">Order Service</button>
@@ -69,7 +71,7 @@
 
 <!--Section 2 Features-->
 
-    <section class="section-features">
+    <section class="section-features hidden">
     <div class="container container-features">
     <h2 class="visually-hidden">Features</h2>
 
@@ -132,7 +134,7 @@
 
 <!--Section 3 Our Team-->
 
-<section class="section-team">
+<section class="section-team hidden">
 <div class=" container container-team"> 
     <h2 class="team-title title">Our Team</h2>
 
@@ -302,7 +304,7 @@
 
 <!--Section 4 Our portfolio-->
 
-<section class="section-portfolio">
+<section class="section-portfolio hidden">
     <div class="container container-portfolio">
     <h2 class="portfolio-title title">Our Portfolio</h2>
     
@@ -396,7 +398,7 @@
 
 <!--Footer-->
 
-<footer class="footer">
+<footer class="footer hidden">
     <div class="container container-footer">
 <!--Logo-->
 <div class="container-footer-logo"> 
