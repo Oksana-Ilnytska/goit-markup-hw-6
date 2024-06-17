@@ -61,12 +61,9 @@ img {
 /*------Header--------*/
 
 .header {
-display: flex; 
-align-items: center;
-justify-content: space-between;
 box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
 border-bottom: 1px solid #e7e9fc;
-
+position: relative;
     }
 
 .container-header {
@@ -77,9 +74,8 @@ align-items: center;
 .nav-header {
 display: flex;
 flex-direction: row;
-align-items: center;
 margin-right: auto;
-justify-content: space-between;
+
 }
 
 .menu-list {
@@ -171,7 +167,10 @@ color: #404bbf;
     border: none;
     line-height: 0;
     padding: 0;
-    cursor: pointer; 
+    cursor: pointer;
+    position: absolute;
+    top: 16px;
+    right: 16px; 
 }
 .header-btn-icon {
     fill: #2f2f37;
@@ -226,6 +225,20 @@ color: #404bbf;
 }
 
 /*-----Menu mobil-------*/
+
+.backdrop-mobil {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+        }
+
 .container-mobil {
 width: 100%;
 min-height: 640px;
@@ -283,6 +296,7 @@ font-size: 20px;
 line-height: 1.2;
 letter-spacing: 0.02em;
 color: #434455;
+font-style: normal;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 
@@ -329,7 +343,7 @@ background-color: #4d5ae5;
     padding: 0;
     cursor: pointer;
     border: 1px solid #2e2f42;;
-    background-color: #e7e9fc;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -353,14 +367,14 @@ background-color: #4d5ae5;
 @media screen and (min-width: 768px) {
     .container-mobil {
         display: none;
-    }   
+    } 
 }
 
 /*----Section 1----*/
 .section-hero {
     padding: 72px 0; 
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), 
-    url(../images/hero-image-mob.jpg);
+    url(../images/hero-mobil-x1.jpg);
     background-position: center; 
     background-color: #2e2f42;
     background-repeat: no-repeat;
@@ -371,7 +385,7 @@ background-color: #4d5ae5;
 @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .section-hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/hero-image-mob-2x.jpg); 
+        url(../images/hero-mobil-x2.jpg); 
     }  
 }
 
@@ -380,12 +394,12 @@ background-color: #4d5ae5;
     padding: 112px 0;
     max-width: 768px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/hero-image-tab-x1.jpg);
+    url(../images/hero-tab-x1.jpg);
 }
 @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .section-hero {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/img-camilia-tab-x2.jpg); 
+        url(../images/hero-tab-x2.jpg); 
     }    
 }
 } 
@@ -393,14 +407,14 @@ background-color: #4d5ae5;
 @media screen and (min-width: 1158px) {
     .section-hero {
     padding: 188px 0;
-    max-width: 1140px;
+    max-width: 1440px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/hero-image-desk-x1.jpg);
+    url(../images/hero-desk-x1.jpg);
 } 
     @media screen and (min-resolution: 192dpi), (min-resolution: 2dppx) {
         .section-hero {
             background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-            url(../images/hero-image-desk-x2.jpg); 
+            url(../images/hero-desk-x2.jpg); 
         }    
     }
 } 
@@ -497,7 +511,7 @@ background-color: #404BBF;
 .section-features {
 padding-top: 96px;
 padding-bottom: 96px; 
-} 
+}
 
 @media screen and (min-width: 1158px) {
     .section-features {
@@ -508,20 +522,20 @@ padding-bottom: 96px;
 
 
 .container-features {
-    width: 320px; 
+    max-width: 320px; 
 }
 
     @media screen and (min-width: 768px)
     {
         .container-features {
-            width: 768px;
+            max-width: 768px;
         } 
     }
 
     @media screen and (min-width: 1158px)
     {
         .container-features {
-            width: 1158px;
+            max-width: 1158px;
         } 
     }
     
@@ -551,18 +565,16 @@ overflow: hidden;
 .features-list {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
      flex-wrap: wrap; 
-      justify-content: center;
-      align-items: center;
-      column-gap: 72px;
+      gap: 72px;
 }
 
 @media screen and (min-width: 768px) {
 .features-list {
-    display: flex;
     flex-direction: row;
-    gap: 24px;
-    align-items: baseline;
+    gap: 24px; 
 }
 }
 
