@@ -1011,10 +1011,16 @@ gap: 24px;
 
 @media screen and (min-width: 768px) {
     .container-footer-logo {
-        margin-right: 120px;
         margin-bottom: 0;
     }
     }
+
+    @media screen and (min-width: 1158px) {
+        .container-footer-logo {
+            margin-right: 120px;
+            margin-bottom: 0;
+        }
+        }
 
 .logo-footer {
     display: flex;
@@ -1026,6 +1032,7 @@ gap: 24px;
 @media screen and (min-width: 1158px) {
     .logo-footer {
         display: inline-block;
+        padding: 0;
 }
 }
 
@@ -1054,6 +1061,12 @@ gap: 24px;
     flex-direction: column;
     justify-content: center;
     align-items: center;  
+}
+
+@media screen and (min-width: 768px) {
+    .container-footer-socials {
+        align-items:self-start;  
+    }
 }
 
 .socials-title {
